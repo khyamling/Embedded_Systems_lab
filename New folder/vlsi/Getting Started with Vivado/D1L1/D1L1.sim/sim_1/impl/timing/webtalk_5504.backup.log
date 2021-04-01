@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Webtalk v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Tue Nov 22 21:59:41 2016
+# Process ID: 5504
+# Current directory: F:/smdp/xup/Day-1_fpga_flow/D1L1/D1L1.sim/sim_1/impl/timing
+# Command line: wbtcv.exe -mode batch -source F:/smdp/xup/Day-1_fpga_flow/D1L1/D1L1.sim/sim_1/impl/timing/xsim.dir/lab1_tb_time_impl/webtalk/xsim_webtalk.tcl -notrace
+# Log file: F:/smdp/xup/Day-1_fpga_flow/D1L1/D1L1.sim/sim_1/impl/timing/webtalk.log
+# Journal file: F:/smdp/xup/Day-1_fpga_flow/D1L1/D1L1.sim/sim_1/impl/timing\webtalk.jou
+#-----------------------------------------------------------
+source F:/smdp/xup/Day-1_fpga_flow/D1L1/D1L1.sim/sim_1/impl/timing/xsim.dir/lab1_tb_time_impl/webtalk/xsim_webtalk.tcl -notrace
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:16 . Memory (MB): peak = 51.000 ; gain = 0.000
+INFO: [Common 17-206] Exiting Webtalk at Tue Nov 22 21:59:57 2016...

@@ -1,0 +1,78 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Wed Nov 23 10:35:14 2016
+# Process ID: 2680
+# Current directory: F:/smdp/xup/Day-1_fpga_flow/D1L3/D1L3.runs/synth_3
+# Command line: vivado.exe -log uart_led.vds -mode batch -messageDb vivado.pb -notrace -source uart_led.tcl
+# Log file: F:/smdp/xup/Day-1_fpga_flow/D1L3/D1L3.runs/synth_3/uart_led.vds
+# Journal file: F:/smdp/xup/Day-1_fpga_flow/D1L3/D1L3.runs/synth_3\vivado.jou
+#-----------------------------------------------------------
+source uart_led.tcl -notrace
+Command: synth_design -top uart_led -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 5472 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 314.180 ; gain = 107.395
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'uart_led' [F:/smdp/xup/Day-1_fpga_flow/lab2/sources/uart_led.v:25]
+	Parameter BAUD_RATE bound to: 115200 - type: integer 
+	Parameter CLOCK_RATE bound to: 100000000 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'meta_harden' [F:/smdp/xup/Day-1_fpga_flow/lab2/sources/meta_harden.v:27]
+INFO: [Synth 8-256] done synthesizing module 'meta_harden' (1#1) [F:/smdp/xup/Day-1_fpga_flow/lab2/sources/meta_harden.v:27]
+INFO: [Synth 8-638] synthesizing module 'uart_rx' [F:/smdp/xup/Day-1_fpga_flow/lab2/sources/uart_rx.v:37]
+	Parameter BAUD_RATE bound to: 115200 - type: integer 
+	Parameter CLOCK_RATE bound to: 100000000 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'uart_baud_gen' [F:/smdp/xup/Day-1_fpga_flow/lab2/sources/uart_baud_gen.v:35]
+	Parameter BAUD_RATE bound to: 115200 - type: integer 
+	Parameter CLOCK_RATE bound to: 100000000 - type: integer 
+	Parameter OVERSAMPLE_RATE bound to: 1843200 - type: integer 
+	Parameter DIVIDER bound to: 54 - type: integer 
+	Parameter OVERSAMPLE_VALUE bound to: 53 - type: integer 
+	Parameter CNT_WID bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'uart_baud_gen' (2#1) [F:/smdp/xup/Day-1_fpga_flow/lab2/sources/uart_baud_gen.v:35]
+INFO: [Synth 8-638] synthesizing module 'uart_rx_ctl' [F:/smdp/xup/Day-1_fpga_flow/lab2/sources/uart_rx_ctl.v:52]
+	Parameter IDLE bound to: 2'b00 
+	Parameter START bound to: 2'b01 
+	Parameter DATA bound to: 2'b10 
+	Parameter STOP bound to: 2'b11 
+INFO: [Synth 8-256] done synthesizing module 'uart_rx_ctl' (3#1) [F:/smdp/xup/Day-1_fpga_flow/lab2/sources/uart_rx_ctl.v:52]
+INFO: [Synth 8-256] done synthesizing module 'uart_rx' (4#1) [F:/smdp/xup/Day-1_fpga_flow/lab2/sources/uart_rx.v:37]
+INFO: [Synth 8-638] synthesizing module 'led_ctl' [F:/smdp/xup/Day-1_fpga_flow/lab2/sources/led_ctl.v:27]
+INFO: [Synth 8-256] done synthesizing module 'led_ctl' (5#1) [F:/smdp/xup/Day-1_fpga_flow/lab2/sources/led_ctl.v:27]
+INFO: [Synth 8-256] done synthesizing module 'uart_led' (6#1) [F:/smdp/xup/Day-1_fpga_flow/lab2/sources/uart_led.v:25]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 351.629 ; gain = 144.844
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 351.629 ; gain = 144.844
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [F:/smdp/xup/Day-1_fpga_flow/lab2/sources/uart_led_pins_basys3.xdc]
+Finished Parsing XDC File [F:/smdp/xup/Day-1_fpga_flow/lab2/sources/uart_led_pins_basys3.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [F:/smdp/xup/Day-1_fpga_flow/lab2/sources/uart_led_pins_basys3.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/uart_led_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/uart_led_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [F:/smdp/xup/Day-1_fpga_flow/lab2/sources/uart_led_timing.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'virtual_clock' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [F:/smdp/xup/Day-1_fpga_flow/lab2/sources/uart_led_timing.xdc:6]
+Finished Parsing XDC File [F:/smdp/xup/Day-1_fpga_flow/lab2/sources/uart_led_timing.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 639.828 ; gain = 0.000

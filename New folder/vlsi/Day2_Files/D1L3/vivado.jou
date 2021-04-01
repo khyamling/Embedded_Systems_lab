@@ -1,0 +1,49 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Wed Nov 23 10:24:19 2016
+# Process ID: 5552
+# Current directory: F:/smdp/xup/Day-1_fpga_flow/D1L3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5540 F:\smdp\xup\Day-1_fpga_flow\D1L3\D1L3.xpr
+# Log file: F:/smdp/xup/Day-1_fpga_flow/D1L3/vivado.log
+# Journal file: F:/smdp/xup/Day-1_fpga_flow/D1L3\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/smdp/xup/Day-1_fpga_flow/D1L3/D1L3.xpr
+update_compile_order -fileset sources_1
+launch_runs synth_3 -jobs 2
+wait_on_run synth_3
+open_run synth_3 -name synth_3
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -name timing_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -name timing_1
+set_property target_constrs_file F:/smdp/xup/Day-1_fpga_flow/lab2/sources/uart_led_timing.xdc [current_fileset -constrset]
+save_constraints -force
+reset_run synth_3
+launch_runs impl_3 -jobs 2
+wait_on_run impl_3
+reset_run synth_3 -noclean_dir 
+close_design
+launch_runs impl_3 -jobs 2
+wait_on_run impl_3
+open_run impl_3
+report_utilization -name utilization_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -name timing_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -name timing_1
+save_constraints
+close_project
+create_project D2L1 F:/smdp/xup/Day-2_fpga_flow/D2L1 -part xc7a100tcsg324-1
+set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
+set_property simulator_language Verilog [current_project]
+add_files -norecurse {F:/smdp/xup/Day-2_fpga_flow/lab4/sources/clk_gen.v F:/smdp/xup/Day-2_fpga_flow/lab4/sources/uart_baud_gen.v F:/smdp/xup/Day-2_fpga_flow/lab4/sources/clk_div.v F:/smdp/xup/Day-2_fpga_flow/lab4/sources/uart_rx_ctl.v F:/smdp/xup/Day-2_fpga_flow/lab4/sources/wave_gen.v F:/smdp/xup/Day-2_fpga_flow/lab4/sources/uart_tx.v F:/smdp/xup/Day-2_fpga_flow/lab4/sources/uart_tx_ctl.v F:/smdp/xup/Day-2_fpga_flow/lab4/sources/debouncer.v F:/smdp/xup/Day-2_fpga_flow/lab4/sources/uart_rx.v F:/smdp/xup/Day-2_fpga_flow/lab4/sources/cmd_parse.v F:/smdp/xup/Day-2_fpga_flow/lab4/sources/rst_gen.v F:/smdp/xup/Day-2_fpga_flow/lab4/sources/samp_ram.v F:/smdp/xup/Day-2_fpga_flow/lab4/sources/reset_bridge.v F:/smdp/xup/Day-2_fpga_flow/lab4/sources/dac_spi.v F:/smdp/xup/Day-2_fpga_flow/lab4/sources/lb_ctl.v F:/smdp/xup/Day-2_fpga_flow/lab4/sources/resp_gen.v F:/smdp/xup/Day-2_fpga_flow/lab4/sources/samp_gen.v F:/smdp/xup/Day-2_fpga_flow/lab4/sources/clkx_bus.v F:/smdp/xup/Day-2_fpga_flow/lab4/sources/meta_harden.v F:/smdp/xup/Day-2_fpga_flow/lab4/sources/to_bcd.v F:/smdp/xup/Day-2_fpga_flow/lab4/sources/out_ddr_flop.v}
+add_files -norecurse F:/smdp/xup/Day-2_fpga_flow/lab4/sources/ip/artix7/char_fifo/char_fifo.xci
+export_ip_user_files -of_objects  [get_files  F:/smdp/xup/Day-2_fpga_flow/lab4/sources/ip/artix7/char_fifo/char_fifo.xci] -force -quiet
+add_files -fileset constrs_1 -norecurse F:/smdp/xup/Day-2_fpga_flow/lab4/sources/wave_gen_timing.xdc
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+synth_design -rtl -name rtl_1
+export_ip_user_files -of_objects [get_ips  char_fifo] -no_script -reset -quiet
+upgrade_ip -vlnv xilinx.com:ip:fifo_generator:13.1 [get_ips  char_fifo] -log ip_upgrade.log
+generate_target all [get_files  F:/smdp/xup/Day-2_fpga_flow/lab4/sources/ip/artix7/char_fifo/char_fifo.xci]
+export_ip_user_files -of_objects [get_files F:/smdp/xup/Day-2_fpga_flow/lab4/sources/ip/artix7/char_fifo/char_fifo.xci] -no_script -force -quiet
+export_simulation -of_objects [get_files F:/smdp/xup/Day-2_fpga_flow/lab4/sources/ip/artix7/char_fifo/char_fifo.xci] -directory F:/smdp/xup/Day-2_fpga_flow/D2L1/D2L1.ip_user_files/sim_scripts -ip_user_files_dir F:/smdp/xup/Day-2_fpga_flow/D2L1/D2L1.ip_user_files -ipstatic_source_dir F:/smdp/xup/Day-2_fpga_flow/D2L1/D2L1.ip_user_files/ipstatic -force -quiet

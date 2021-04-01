@@ -1,0 +1,1 @@
+https://forums.xilinx.com/t5/Implementation/Calculation-data-path-delay-and-clk-path-delay-in-FPGA-Editor/td-p/59338
